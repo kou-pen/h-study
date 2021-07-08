@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+
+    <div class="form-group">
+        <label for="InputSubject">Subjects</label>
+        <select name="subject" id="InputSubject">
+            <option value="japanese">国語</option>
+            <option value="math">数学</option>
+            <option value="science">理科</option>
+            <option value="s-study">社会</option>
+            <option value="english">英語</option>
+            <option value="practical">実技</option>
+            <option value="self">自習</option>
+            <option value="cram">塾</option>
+            <option value="others">その他</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Inputlong">学習時間</label>
+        <input type="time" id="Inputlong">
+    </div>
+
+    <div class="form-group">
+        <label for="Inputdate">今日の日付</label>
+　　　　<input type="date" id="Inputdate">
+    </div>
+
+    <div class="form-group">
+        <label for="Inputnow">今の時間</label>
+        <input type="time" id="Inputnow">
+    </div>
+
+    <div>
+        <label for="Inputcomment">一言</label>
+        <textarea cols="40" id="comment"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">作成</button>
+    </form>
+{% endblock %}
